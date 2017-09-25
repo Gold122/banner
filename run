@@ -1,0 +1,19 @@
+#!/bin/bash
+
+if [[ $1 == 'stop' ]]; then
+		echo -e '';
+        screen -S banner -X quit
+		echo -e "[>>] Banner zostal wylaczony [<<]"
+elif [[ $1 == 'start' ]]; then
+		echo -e '';
+        screen -dmS banner php banner.php
+		echo -e "[>>] Banner zostal uruchomiony [<<]"
+else
+	echo -e '';
+	echo -e "[>>] Uzycie: ./run.sh {start/stop} [<<]"
+	echo -e "[>>] start - uruchomienie Banner'u [<<]"
+	echo -e "[>>] stop - wylaczenie banner'u [<<]"
+	echo -e '';
+ fi
+
+
